@@ -1,6 +1,15 @@
+import { useRef } from "react";
 import { isDev, isPrd } from "./utils/mode";
 
 function App() {
+    const $favicon: HTMLLinkElement | null = document.getElementById(
+        "favicon",
+    ) as HTMLLinkElement;
+
+    if ($favicon) {
+        $favicon.href = `/images/${isDev() ? `vite` : `react`}.svg`;
+    }
+
     return (
         <div className="App">
             현재 여기는 {isPrd() ? `상용` : `개발`}입니다
