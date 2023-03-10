@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { isDev, isPrd } from "./utils/mode";
+import { isDev, isPrd } from "@utils/mode";
 
 function App() {
     const $favicon: HTMLLinkElement | null = document.getElementById(
